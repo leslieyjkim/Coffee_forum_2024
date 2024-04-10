@@ -1,5 +1,6 @@
 import './App.css'
 import Header from "./components/Header";
+import ReplyForm from './components/ReplyForm';
 
 function App() {
   return (
@@ -33,10 +34,7 @@ function App() {
             </article>
           </main> 
           <footer>
-            <form>
-              <input type='text' placeholder='Enter your comment' />
-              <button>Add comment</button>
-            </form>
+            <ReplyForm />
           </footer>
         </section>
       </main>
