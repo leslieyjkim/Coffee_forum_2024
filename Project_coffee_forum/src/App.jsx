@@ -1,7 +1,8 @@
 import './App.css'
 import Header from "./components/Header";
 import ReplyForm from './components/ReplyForm';
-import ReplyListItem from './components/ReplyListItem';
+import ReplyList from './components/ReplyList';
+
 
 function App() {
   return (
@@ -17,10 +18,7 @@ function App() {
             </h2>
           </header>
           <main>
-            <h1>Replies</h1>
-            <ReplyListItem />
-            <ReplyListItem />
-            <ReplyListItem />
+            <ReplyList />
           </main> 
           <footer>
             <ReplyForm />
