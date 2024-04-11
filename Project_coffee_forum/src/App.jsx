@@ -26,7 +26,7 @@ function App() {
             </h2>
           </header>
           <main>
-            <ReplyList replies={replies} />
+            <ReplyList replies={replies} users={usersObj} />
           </main> 
           <footer>
             <ReplyForm />

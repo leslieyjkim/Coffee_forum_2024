@@ -1,10 +1,11 @@
 import ReplyListItem from './ReplyListItem';
 
 export default function ReplyList(props){
-    const { replies } = props; //extract props here seperately not to make confusing.
-    const parsedReplies = replies.map(reply => (
-        <ReplyListItem key={reply.id} {...reply} />
-    ));
+    const { replies, users} = props; //extract props here seperately not to make confusing.
+    const parsedReplies = 
+        Array.isArray(replies) &&
+        replies.map((reply) => <ReplyListItem key={reply.id} {...reply} user={users[reply.authorId]} />);
+    
     //When I take all of my individual replies,
     //and I create a ReplyListItem out of it,
     //I'm parsing the raw data of my reply
