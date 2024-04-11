@@ -1,3 +1,4 @@
+import {useState} from "react";
 import './App.scss'
 import Header from "./components/Header";
 import ReplyForm from './components/ReplyForm';
@@ -11,6 +12,7 @@ import { usersObj } from "./data/userData";
 //Do we need state? Yes.
 //Other than the JSON data from outside, 
 //we have to manipulate and do things with it, then we need 'state'.
+//Do not forget adding 'import {useState} from "react";'
 
 function App() {
   const [forumPost, setForumPost] = useState(initialPostData);
