@@ -7,7 +7,7 @@ import ReplyList from './components/ReplyList';
 //Import point should be the highest in the three that is relevant
 import { forumPost as initialPostData } from "./data/postData";
 import { usersObj } from "./data/userData";
-import { addPostReply } from "./helpers/postHelpers";
+import { addPostReply, addReplyLike } from "./helpers/postHelpers";
 
 
 //Do we need state? Yes.
@@ -27,6 +27,11 @@ function App() {
     setForumPost(updateForumPost)
   }
 
+  const addReplyLikeOfPost = (replyId) => {
+    const updatedForumPost = addReplyLike(forumPost, replyId);
+
+    setForumPost(updatedForumPost);
+  }
 
   return (
     <>
@@ -41,8 +46,11 @@ function App() {
             </h2>
           </header>
           <main>
-            <ReplyList replies={replies} users={usersObj} />
-          </main> 
+            <ReplyList 
+              replies={replies} 
+              users={users} 
+              addReplyLikeOfPost={addReplyLikeOfPost} />
+          </main>  
           <footer>
             <ReplyForm onSubmit = {addReply}/>
           </footer>
