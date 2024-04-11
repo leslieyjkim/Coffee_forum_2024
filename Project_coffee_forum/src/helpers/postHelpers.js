@@ -13,3 +13,20 @@ export const addPostReply = (forumPost, content) => {
   
     return updatedForumPost;
   };
+
+//Like helper function
+
+  export const addReplyLike = (forumPost, replyId) => {
+    const updatedForumPost = { ...forumPost };
+    const updatedReplies = [...forumPost.replies];
+    const replyIndex = updatedReplies.findIndex(reply => reply.id ===  replyId)
+
+    const updatedReply = { ...updatedReplies[replyIndex]};
+
+    updatedReply.likes++;
+
+    updatedForumPost.replies = updatedReplies;
+    updatedReplies[replyIndex] = updatedReply
+
+    return updatedForumPost
+  }
