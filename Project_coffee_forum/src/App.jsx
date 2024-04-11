@@ -3,27 +3,35 @@ import Header from "./components/Header";
 import ReplyForm from './components/ReplyForm';
 import ReplyList from './components/ReplyList';
 
+//Import point should be the highest in the three that is relevant
+import { forumPost } from "./data/postData";
+import { usersObj } from "./data/userData";
+
+
 
 function App() {
+
+  const replies = forumPost.replies
+  const forumPostAuthor = usersObj[forumPost.authorId]; //Add the position of the forumPost/authorId onto usersObj
   return (
     <>
       <Header />
       <main>
         <section>
           <header>
-            <h1>QUESTION</h1>
+            <h1>{forumPost.question}</h1>
             <h2>
-              <img src='https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg' alt='' />
-              <span>By: AUTHOR NAME</span>
+              <img src={forumPostAuthor.profile_url} alt='' />
+              <span>By: {forumPostAuthor.name}</span>
             </h2>
           </header>
           <main>
-            <ReplyList />
+            <ReplyList replies={replies} />
           </main> 
           <footer>
             <ReplyForm />
           </footer>
-        </section>
+        </section> 
       </main>
     </>
   );
