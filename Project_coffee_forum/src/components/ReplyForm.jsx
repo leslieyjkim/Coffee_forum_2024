@@ -20,8 +20,8 @@ export default function ReplyForm(props) {
 //which is to refresh the page and send a information.
 //And then, after that I want to call the onSubmit prop with the value of comment. 
   const handleSubmit = (event) => {
-    event.preventDefault()
-    onSubmit(formData)
+    event.preventDefault();
+    onSubmit(formData);
     setFormData(initialValues); //set the FormData back to initialvalues.
   }
     return (

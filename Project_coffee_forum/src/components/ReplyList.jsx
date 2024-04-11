@@ -2,6 +2,7 @@ import ReplyListItem from './ReplyListItem';
 
 export default function ReplyList(props){
     const { replies, users, addReplyLikeOfPost} = props; //extract props here seperately not to make confusing.
+
     const parsedReplies = 
         Array.isArray(replies) &&
         replies.map((reply) => (
@@ -11,7 +12,7 @@ export default function ReplyList(props){
                 user={users[reply.authorId]} 
                 addReplyLikeOfPost={() => addReplyLikeOfPost(reply.id)}
             />
-        ) );
+        ));
     
     //When I take all of my individual replies,
     //and I create a ReplyListItem out of it,

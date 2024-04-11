@@ -15,6 +15,23 @@ import { addPostReply, addReplyLike } from "./helpers/postHelpers";
 //we have to manipulate and do things with it, then we need 'state'.
 //Do not forget adding 'import {useState} from "react";'
 
+
+
+
+//Below: version of with 'useReducer'
+// const postReducer = (state, action) => {
+//   const {type, data} = action
+
+//   switch (type){
+//     case "addReply":
+//       return addPostReply(state, data.comment);
+
+//     case "addLike":
+//       return addReplyLike(state, data.replyId);
+
+//   }
+// }
+
 function App() {
   const [forumPost, setForumPost] = useState(initialPostData);
   const [users, setUsers] = useState(usersObj);
@@ -23,8 +40,8 @@ function App() {
   const forumPostAuthor = users[forumPost.authorId]; //Add the position of the forumPost/authorId onto usersObj
 
   const addReply = (formData) => {
-    const updateForumPost = addPostReply(forumPost, formData.comment)
-    setForumPost(updateForumPost)
+    const updatedForumPost = addPostReply(forumPost, formData.comment)
+    setForumPost(updatedForumPost);
   }
 
   const addReplyLikeOfPost = (replyId) => {
