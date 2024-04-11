@@ -75,7 +75,7 @@ const addPostReply = (forumPost, content) => {
   };
 
   const updatedForumPost = { ...forumPost };
-  const updatedReplies = [...forumPost.replies, newReply];
+  const updatedReplies = [...forumPost.replies, newReply]; //Add newReply at the end directly
 
   updatedForumPost.replies = updatedReplies;
 

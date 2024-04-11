@@ -7,6 +7,7 @@ import ReplyList from './components/ReplyList';
 //Import point should be the highest in the three that is relevant
 import { forumPost as initialPostData } from "./data/postData";
 import { usersObj } from "./data/userData";
+import { addPostReply } from "./helpers/postHelpers";
 
 
 //Do we need state? Yes.
@@ -20,6 +21,13 @@ function App() {
 
   const replies = forumPost.replies
   const forumPostAuthor = users[forumPost.authorId]; //Add the position of the forumPost/authorId onto usersObj
+
+  const addReply = (formData) => {
+    const updateForumPost = addPostReply(forumPost, formData)
+    setForumPost(updateForumPost)
+  }
+
+
   return (
     <>
       <Header />
@@ -36,7 +44,7 @@ function App() {
             <ReplyList replies={replies} users={usersObj} />
           </main> 
           <footer>
-            <ReplyForm />
+            <ReplyForm onSubmit = {addReply}/>
           </footer>
         </section> 
       </main>
