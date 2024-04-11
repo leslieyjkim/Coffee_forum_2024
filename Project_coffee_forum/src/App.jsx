@@ -23,7 +23,7 @@ function App() {
   const forumPostAuthor = users[forumPost.authorId]; //Add the position of the forumPost/authorId onto usersObj
 
   const addReply = (formData) => {
-    const updateForumPost = addPostReply(forumPost, formData)
+    const updateForumPost = addPostReply(forumPost, formData.comment)
     setForumPost(updateForumPost)
   }
 

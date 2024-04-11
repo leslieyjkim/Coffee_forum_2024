@@ -1,7 +1,7 @@
 export const addPostReply = (forumPost, content) => {
     const newReply = {
       id: forumPost.replies.length + 1,
-      authorId: Math.round(Math.random() * 6),
+      authorId: Math.ceil(Math.random() * 6),
       content,
       likes: 0,
     };
