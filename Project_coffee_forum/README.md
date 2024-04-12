@@ -9,3 +9,13 @@ Currently, two official plugins are available:
 
 
 ### If you want to start the app, write this command on your terminal [npm run dev]
+
+
+###Plan to go
+-LOG IN/ OUT
+-REGISTER
+-UPLOAD Profile image
+-SAVE replies under the questions
+-My Question sorting
+-Add date info on reply
+-Sorting reply best #likes

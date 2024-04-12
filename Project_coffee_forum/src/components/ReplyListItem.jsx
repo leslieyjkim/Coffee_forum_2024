@@ -5,11 +5,9 @@ export default function ReplyListItem(props){
     return (
             <article className="ReplyListItem">
               <p>
-              <span>{content}</span>
-              <br></br>
-              <br></br>
+              <span>{content}  </span>
               <button onClick={addReplyLikeOfPost} className="Replybutton-style">
-                  Likes: {likes}
+                  Likes 👍🏻 {likes}
               </button>
               </p>
               <p>{user.name}</p>
