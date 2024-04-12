@@ -3,7 +3,7 @@ export const forumPost = {
     id: "3", // Unique post ID
     title: "Coffee Recommendations",
     question:
-      "I'm a coffee enthusiast, and I'm always looking for new coffee experiences. Can you recommend any unique coffee shops or hidden gems in our city? I appreciate your suggestions!",
+      "I'm a coffee enthusiast, and I'm always looking for new coffee experiences. Can you recommend any unique coffee shops or hidden gems close to our office? I appreciate your suggestions!",
     likes: 0, // Always 0 likes
     replies: [
       {

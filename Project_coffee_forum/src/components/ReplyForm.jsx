@@ -27,6 +27,7 @@ export default function ReplyForm(props) {
     return (
         <form className="ReplyForm" onSubmit={handleSubmit}>
         <input 
+          className="ReplyInput"
           type='text' 
           placeholder='Enter your comment' 
           value={formData.comment}

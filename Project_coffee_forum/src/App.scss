@@ -4,11 +4,25 @@
   width: 100%;
 }
 
+body {
+  background-color: #574a39;
+}
+
 .Header {
   width: 100%;
-  background-color: #bada55;
-  color:#000;
+  background-color: #6f4e37;
+  color:#f7f1e4;
   padding: 2em;
+  margin-bottom: 20px;
+}
+
+.question-container {
+  width: 70%;
+  color:#f7f1e4;
+  border: 2px solid #f7f1e4;;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 0 auto; //centers the box
 }
 
 section > header {
@@ -16,27 +30,53 @@ section > header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  h1 {
+    font-size: 2.3em;
+    text-align: justify;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 100px;
+  }
   h2 {
     display: flex;
     align-items: center;
     gap: 1em;
+    margin-left: 30px;
   
     img {
-      height: 100px;
+      height: 200px;
     }
+    margin-bottom: 30px;
   }
 }
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+  color:#f7f1e4;
+}
+
+
 .ReplyListItem {
+  width: 90%;
   display: grid;
+  align-items: center;
+  text-align: left;
+  border: 2px solid #38a8a6;
+  border-radius: 10px;
+  margin: 0 auto; //centers the box
+  margin-bottom: 20px;
+  padding: 10px;
   gap: 1em;
+  font-size: 20px;
   grid-template-areas: 
   "profile reply"
   "name reply"
   ;
   img{
     grid-area: profile;
-    height: 200px; 
+    height: 300px; 
   }
   p:last-of-type {
     grid-area: name;
@@ -47,6 +87,7 @@ section > header {
 }
 
 .ReplyForm {
+  width: 100%;
   padding:1em;
   background-color: #38a8a6;
   input,
@@ -55,4 +96,8 @@ section > header {
      margin: 1em;
      padding: 1em;
   }
+}
+
+.ReplyInput {
+  width: 1000px;
 }

@@ -56,11 +56,15 @@ function App() {
       <main>
         <section>
           <header>
-            <h1>{forumPost.question}</h1>
-            <h2>
+            <div className="question-container">
+              <h1>{forumPost.question}</h1>              
+              <h2>
               <img src={forumPostAuthor.profile_url} alt='' />
-              <span>By: {forumPostAuthor.name}</span>
-            </h2>
+              <span>Question from : {forumPostAuthor.name}</span>
+              </h2>   
+            </div>       
+
+      
           </header>
           <main>
             <ReplyList 
