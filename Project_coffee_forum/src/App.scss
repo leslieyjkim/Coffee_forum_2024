@@ -39,7 +39,7 @@ section > header {
   }
   h2 {
     display: flex;
-    align-items: center;
+    align-items:end;
     gap: 1em;
     margin-left: 30px;
   
@@ -62,7 +62,7 @@ main {
   width: 90%;
   display: grid;
   align-items: center;
-  text-align: left;
+  // text-align: flex;
   border: 2px solid #38a8a6;
   border-radius: 10px;
   margin: 0 auto; //centers the box
@@ -80,10 +80,21 @@ main {
   }
   p:last-of-type {
     grid-area: name;
+    text-align: left;
+    font-size: 1.2em;
   }
   p:first-of-type {
+    font-size: 1.4em;
     grid-area: reply;
+    text-align: left;
   }
+}
+
+.Replybutton-style{
+  color: #f7f1e4;
+  background-color: #59968d;
+  font-size: 0.8em;/* Adjust the font size to make the button smaller */
+  padding: 5px 10px;/* Adjust padding for smaller size */
 }
 
 .ReplyForm {
@@ -92,7 +103,7 @@ main {
   background-color: #38a8a6;
   input,
   button{
-     font-size:1.2em ;
+     font-size:1.3em ;
      margin: 1em;
      padding: 1em;
   }
