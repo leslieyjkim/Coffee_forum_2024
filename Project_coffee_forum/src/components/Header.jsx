@@ -15,8 +15,8 @@ export default function Header(props) {
 
     return (
         <header className="Header">
-        <h1>☕️ Super Coffee Forum </h1>
-        <h2 onClick={handleClick}>{count.value}</h2>
+        <h1>Super Coffee Forum</h1>
+        <h2 onClick={handleClick}>How many? {count.value}</h2>
       </header>
     )
 }
