@@ -25,3 +25,5 @@ Currently, two official plugins are available:
 -My Question sorting
 -Add date info on reply
 -Sorting reply best #likes
+
+Jan-08-2024 cohorts W7D3
