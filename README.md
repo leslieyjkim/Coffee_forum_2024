@@ -1,5 +1,6 @@
 ![Screenshot](https://raw.githubusercontent.com/leslieyjkim/Coffee_forum_2024/02c794efbb98c1f786d937b960ccfd3a8a667d41/Version%231.Main_page_top.png)
 
+
 ![Screenshot](https://raw.githubusercontent.com/leslieyjkim/Coffee_forum_2024/02c794efbb98c1f786d937b960ccfd3a8a667d41/Version%231.Main_page_bottom.png)
 
 
